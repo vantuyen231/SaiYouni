@@ -31,3 +31,4 @@ cd SaiYouni
 `git commit -m "..."`: Chấp nhận thay đổi kèm theo lời nhắn những thay đổi đó là gì.\
 `git push`: Đẩy lên github.
 
+# Lưu ý khi đổi branch thì phải commit hết tại branch đó rồi mới đổi branch
