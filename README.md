@@ -15,9 +15,9 @@ git clone https://github.com/ten-tai-khoan-cua-ban/SaiYouni.git
 cd SaiYouni
 ## Bước 3: Thêm Repository Gốc Là Remote Upstream
 1. Để giữ cho bản fork của bạn luôn đồng bộ với repository gốc, hãy thêm repository gốc làm một remote có tên là upstream:
-git remote add upstream https://github.com/HinMinh/SaiYouni.git
+`git remote add upstream https://github.com/HinMinh/SaiYouni.git`
 2. Cập nhật thông tin mới của git dùng:
-git fetch upstream
+`git fetch upstream`
 3a. Nếu nhánh đó mới thì bạn sử dụng:
 `git checkout Ten_Nhanh`
 3b. Nếu nhánh đó cũ thì bạn sử dụng merge:
