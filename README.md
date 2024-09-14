@@ -24,10 +24,10 @@ cd SaiYouni
 `git merge upstream/Ten_Nhanh`
 
 ## Kĩ thuật sử dụng github cơ bản
-`git branch`: Hiển thị các nhánh bên trong dự án của bạn
-`git checkout Ten Nhanh`: Thay đổi nhánh của bạn
-`git pull`: Lấy dữ liệu mới về
-`git add`: Thay đổi cập nhật vào git
-`git commit -m "..."`: Chấp nhận thay đổi kèm theo lời nhắn những thay đổi đó là gì
-`git push`: Đẩy lên github
+`git branch`: Hiển thị các nhánh bên trong dự án của bạn.
+`git checkout Ten Nhanh`: Thay đổi nhánh của bạn.
+`git pull`: Lấy dữ liệu mới về.
+`git add`: Thay đổi cập nhật vào git.
+`git commit -m "..."`: Chấp nhận thay đổi kèm theo lời nhắn những thay đổi đó là gì.
+`git push`: Đẩy lên github.
 
