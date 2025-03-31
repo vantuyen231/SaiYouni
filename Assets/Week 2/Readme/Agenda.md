@@ -2,8 +2,20 @@
 
 ## 1. Kể Tên 3 Hàm Màu Xanh (Blue) Mà Unity Sẽ Tự Động Gọi
 
+>Các hàm màu xanh trong Unity
+> Start();
+> Update();
+> FixedUpdate();
+> Awake();
+> OnTriggerEnter();
+> OnDestroy();
 ## 2. Kể Tên 5 Loại Giải Thuật Sắp Xếp Khác Nhau
-
+> Các giải thuật gồm
+> Giả thuật Quick Sort (Sắp xếp nhanh)
+> Giải thuật Heap Sort (Sắp xếp bằng đống)
+> Giải thuật Meger Sort (Sắp xếp trộn)
+> Giải thuật Selection Sort (Sắp xếp chọn)
+> Giải thuật xắt Insertion Sort (Sắp xếp chèn)
 ## 3. Dùng Một Giải Thuật Sắp Xếp Khác Để Thay Cho Giải Thuật Trong Buổi Học
 
 ## 4. Thực Hiện Random Cho Current HP
