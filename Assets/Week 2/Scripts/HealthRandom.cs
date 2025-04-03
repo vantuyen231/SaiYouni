@@ -7,8 +7,11 @@ public class HealthRandom : MonoBehaviour
 {
     //----------------------Edit below here --------------------
     public Slider slider;
-    public int maxHealth = 0;
-    public int minHealth = 100;
+    public int maxHealth = 100;
+    public int minHealth = 0;
+    public int health = 0;
+
+    
     //----------------------Edit above here --------------------
     public void Start()
     {
@@ -25,6 +28,6 @@ public class HealthRandom : MonoBehaviour
     //----------------------Edit below here --------------------
     public void RandomHealth()
     {
-
+        this.health = Random.Range(minHealth, maxHealth);
     }
 }

@@ -132,9 +132,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 200305676}
-  - component: {fileID: 200305675}
   - component: {fileID: 200305674}
   - component: {fileID: 200305677}
+  - component: {fileID: 200305678}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -154,24 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d887faea913113144bd7310bdd43cf6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &200305675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200305673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58351a9b0579a244a881c1c6f9e463bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  maxHp: 0
-  currentHp: 0
-  damegeEnemy: 0
-  speed: 0
-  isDead: 0
 --- !u!4 &200305676
 Transform:
   m_ObjectHideFlags: 0
@@ -214,6 +196,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &200305678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200305673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25014dd031926a49b4ace5dfc7c8c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
