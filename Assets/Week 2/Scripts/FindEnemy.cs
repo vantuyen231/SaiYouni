@@ -5,12 +5,18 @@ using UnityEngine;
 public class FindEnemy : SaiBehavior
 {
     //----------------------Edit below here --------------------
+    public Enemy minEnemy;
+    public Enemy maxEnemy;
     public List<Enemy> enemyList;
+
 
     private void Start()
     {
+        this.LoadComponents();
         this.ShowEnemey();
-        
+        FindEnemyWithSmallestHealth();
+        FindEnemyWithLargestHealth();
+
     }
     protected override void LoadComponents()
     {
@@ -40,23 +46,45 @@ public class FindEnemy : SaiBehavior
 
     public Enemy FindEnemyWithSmallestHealth()
     {
-        if (enemyList == null || enemyList.Count == 0) return null; 
+        float minHealth = Mathf.Infinity;
 
-        Enemy weakestEnemy = enemyList[0]; 
-        foreach (Enemy enemy in enemyList)
+        foreach (Enemy enemy in this.enemyList)
         {
-            if (enemy.health < weakestEnemy.health) 
+            if (enemy.health < minHealth)
             {
-                weakestEnemy = enemy;
+                minHealth = enemy.health;
+                this.minEnemy = enemy;
             }
         }
-        return weakestEnemy;
+
+        if (minEnemy != null)
+        {
+            Debug.Log("Min Enemy: " + this.minEnemy.name + " - " + this.minEnemy.health);
+        }
+
+        return minEnemy;
     }
 
     public Enemy FindEnemyWithLargestHealth()
     {
-        return null;
-    }
+        float maxHealth = Mathf.NegativeInfinity;
 
-    //----------------------Edit above here --------------------
+        foreach (Enemy enemy in this.enemyList)
+        {
+            if (enemy.health > maxHealth)
+            {
+                maxHealth = enemy.health;
+                this.maxEnemy = enemy;
+            }
+        }
+
+        if (maxEnemy != null)
+        {
+            Debug.Log("Max Enemy: " + this.maxEnemy.name + " - " + this.maxEnemy.health);
+        }
+
+        return maxEnemy;
+
+        //----------------------Edit above here --------------------
+    }
 }
