@@ -9,7 +9,8 @@ public class Enemy : MonoBehaviour
     // 5 Enemies variables
     public GameObject Player ;
     //variables 1 
-    [SerializeField] private float maxHp;
+    public float maxHp;
+    public float minHp;
     //variables 2
     [SerializeField] private float currentHp;
     //variables 3 
@@ -19,16 +20,19 @@ public class Enemy : MonoBehaviour
     //variables 5 
     [SerializeField] private bool isDead;
 
+    public int health = 0;
+
     // 5 Enemies methods
 
     private void Start()
     {
-        Move();
-        TakeDamage();
-        Die();
-        Patrol();
+        RandomHp();
     }
-
+    public void RandomHp()
+    {
+        this.health = UnityEngine.Random.Range(0, 100);
+    }
+    
     //Method 1
     private void Move()
     {
