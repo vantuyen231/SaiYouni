@@ -222,7 +222,7 @@ public class IfStatementPractise : MonoBehaviour
                 if (timeWork > 40)
                 {
                     double overtimeHours = timeWork - 40;
-                    salary = (40 * hourlyWage) + (overtimeHours * hourlyWage * 1.5);
+                    salary = (40 * hourlyWage) + (overtimeHours * hourlyWage * overtime);
                 }
                 else
                 {
