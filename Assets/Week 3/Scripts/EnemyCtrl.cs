@@ -11,17 +11,29 @@ public class EnemyCtrl : SaiBehavior
     protected override void Awake()
     {
         base.Awake();
-
+        
     }
 
     protected override void LoadComponents()
     {
         base .LoadComponents();
         this.LoadAgent();
+        this.LoadAnimator();
     }
     
     protected virtual void LoadAgent()
     {
+        if(this.agent != null) return;
+        this.agent = transform.Find("Model").GetComponent<NavMeshAgent>();
 
+        Debug.LogWarning(transform.name +": LoadAgent", gameObject);
+    }
+
+    protected virtual void LoadAnimator()
+    {
+        if (this.animator != null) return;
+        this.animator = GetComponent<Animator>();
+
+        Debug.LogWarning(transform.name + ": LoadAnimator", gameObject);
     }
 }

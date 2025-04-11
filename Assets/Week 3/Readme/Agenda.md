@@ -17,13 +17,26 @@
 - Thiết lập các transition (chuyển cảnh) giữa các animation để tạo sự linh hoạt cho các hành động của nhân vật.
 - Kiểm tra tính đồng nhất giữa các animation trong quá trình chuyển tiếp.
 
+
 ## 4. Tìm Kiếm 2 Website Khác Ngoài Unity Store Cung Cấp Asset
 
 - Tìm và đánh giá thêm 2 trang web cung cấp asset để làm phong phú nguồn tài nguyên cho dự án.
 - Một số trang web có thể tham khảo bao gồm:
   - **CGTrader**: Chuyên cung cấp asset 3D.
   - **TurboSquid**: Một trang web uy tín với nhiều asset cho các dự án game và phim.
-- Xem xét độ tương thích của các asset với Unity và dự án hiện tại.
+  - **Sketchfab**:
+  - Xem xét độ tương thích của các asset với Unity và dự án hiện tại.
+  - **CGTrader**: 
+  - Cung cấp khá đa dạng, trong 1 model có nhiều tùy biến bên trong tạo độ phức tạp hơn nhưng nếu sử dụng căn bản thì những cái căn bản có thể sử dụng giống mixamo
+  - Có các nhiêu tag phân nhỏ có thể dễ tìm ra model phù hợp, các model trên web thiên về hướng tả thực và người thật hơn là các kiểu nhân vật game dễ thương hay thiên hướng hoạt hình
+  - Chưa dùng thử aimation trên web này
+  - **TurboSquid**: 
+  - Mới kiểm tra và đăng nhập mới đầu vào web hơi khó nắm bắt được thông tin 
+  - **Sketchfab**: 
+  - Vào tìm hiểu sơ qua cũng như đi tìm các model character thì em thấy web thiên về các nhân vật game hoặc nhân vật hoạt hình mang phong cách đơn giản
+  - Đã thử tải 1 model về và kiểm tra file fbx vẫn khác tương tương đồng với Mixamo
+  - Về mặt giao diện trên web khác trực quan có thểm xoay chuyển xem được 360 độ
+  - Nhược điểm có 1 số model không có file dạng fbx hoặc không có file phù hợp cho unity và animation không thể dùng chung mà chỉ riêng cho model nhất địnhđịnh
 
 ## 5. Hỏi AI Cách Sử Dụng Nav Mesh Obstacle
 
