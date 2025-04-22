@@ -8,6 +8,10 @@ public class EnemyCtrl : SaiBehavior
     [SerializeField] protected NavMeshAgent agent;
     [SerializeField] protected Animator animator;
 
+
+    public NavMeshAgent Agent => agent;
+    public Animator Animator => animator;
+
     protected override void Awake()
     {
         base.Awake();
@@ -20,20 +24,18 @@ public class EnemyCtrl : SaiBehavior
         this.LoadAgent();
         this.LoadAnimator();
     }
-    
+
     protected virtual void LoadAgent()
     {
-        if(this.agent != null) return;
-        this.agent = transform.Find("Model").GetComponent<NavMeshAgent>();
-
-        Debug.LogWarning(transform.name +": LoadAgent", gameObject);
+        if (this.agent != null) return;
+        this.agent = GetComponent<NavMeshAgent>();
+        Debug.LogWarning(transform.name + ": LoadAgent", gameObject);
     }
 
     protected virtual void LoadAnimator()
     {
         if (this.animator != null) return;
-        this.animator = GetComponent<Animator>();
-
+        this.animator = transform.Find("Model").GetComponent<Animator>();
         Debug.LogWarning(transform.name + ": LoadAnimator", gameObject);
     }
 }
