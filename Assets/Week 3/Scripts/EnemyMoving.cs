@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMoving4 : SaiBehavior
+public class EnemyMoving4 : SaiBehaviour
 {
     [SerializeField] protected Point pointToGo;
     [SerializeField] protected EnemyCtrl ctrl;

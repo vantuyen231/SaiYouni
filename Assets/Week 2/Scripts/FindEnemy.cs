@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FindEnemy : SaiBehavior
+public class FindEnemy : SaiBehaviour
 {
     //----------------------Edit below here --------------------
     public Enemy minEnemy;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyCtrl : SaiBehavior
+public class EnemyCtrl : SaiBehaviour
 {
     [SerializeField] protected NavMeshAgent agent;
     [SerializeField] protected Animator animator;
