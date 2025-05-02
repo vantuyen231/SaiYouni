@@ -10,7 +10,7 @@ public class FindEnemy : SaiBehaviour
     public List<Enemy> enemyList;
 
 
-    private void Start()
+    protected override void Start()
     {
         this.LoadComponents();
         this.ShowEnemey();

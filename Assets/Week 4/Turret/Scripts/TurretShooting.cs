@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GridBrushBase;
 
 public class TurretShooting : SaiBehaviour
 {
@@ -10,7 +11,7 @@ public class TurretShooting : SaiBehaviour
     [SerializeField] protected float shootSpeed = 1f;
     [SerializeField] protected int currentFirePoint = 0;
 
-    public Transform bulletPrefab;
+    public BulletCtrl bulletPrefab;
 
 
 
@@ -33,6 +34,17 @@ public class TurretShooting : SaiBehaviour
         Vector3 newDirection = Vector3.RotateTowards(
             this.ctrl.Rotator.forward, directionToTarget, rotationSpeed * Time.deltaTime, 0.0f);
         this.ctrl.Rotator.rotation = Quaternion.LookRotation(newDirection);
+        //if (this.target == null) return;
+
+        //Vector3 directionToTarget = this.target.transform.position - this.ctrl.Rotator.position;
+        //directionToTarget.y = 0f;
+
+        //if (directionToTarget.sqrMagnitude < 0.01f) return; 
+
+        //Quaternion targetRotation = Quaternion.LookRotation(directionToTarget.normalized);
+        //this.ctrl.Rotator.rotation = Quaternion.RotateTowards(
+        //    this.ctrl.Rotator.rotation, targetRotation, rotationSpeed * Time.deltaTime * Mathf.Rad2Deg);
+
     }
 
     protected override void LoadComponents()
@@ -62,10 +74,18 @@ public class TurretShooting : SaiBehaviour
         Debug.Log("Shooting");
         FirePoint firePoint = this.GetFirePoint();
 
-        Vector3 rotarionDirection = this.ctrl.Rotator.transform.forward;
+        //Vector3 rotarionDirection = this.ctrl.Rotator.transform.forward;
 
-        Transform newBullet = Instantiate(this.bulletPrefab, firePoint.transform.position, Quaternion.identity);
-        newBullet.rotation = Quaternion.LookRotation(rotarionDirection.normalized);
+        //Transform newBullet = Instantiate(this.bulletPrefab, firePoint.transform.position, Quaternion.identity);
+        Vector3 rotatorDirection = (this.target.transform.position - firePoint.transform.position).normalized;
+
+
+
+        //Transform newBullet = Instantiate(this.bulletPrefab, firePoint.transform.position, Quaternion.LookRotation(rotarionDirection));
+        //newBullet.rotation = Quaternion.LookRotation(rotarionDirection.normalized);
+        BulletCtrl newBullet = BulletSpawnerCtrl.Instance.Spawner.Spawn(this.bulletPrefab, firePoint.transform.position);
+        newBullet.transform.rotation = Quaternion.LookRotation(rotatorDirection.normalized);
+        newBullet.SetActive(true);
     }
 
     protected virtual FirePoint GetFirePoint()

@@ -7,7 +7,7 @@ public class EnemyManager : SaiBehaviour
     public EnemyCtrl maxEnemy;
     public List<EnemyCtrl> enemies;
 
-    private void Start()
+    protected override void Start()
     {
 
     }

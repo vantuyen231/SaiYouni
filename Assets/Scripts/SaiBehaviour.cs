@@ -20,4 +20,13 @@ public class SaiBehaviour : MonoBehaviour
     {
         //TODO: for override
     }
+    public virtual void SetActive(bool status)
+    {
+        gameObject.SetActive(status);
+    }
+
+    protected virtual void ResetValue()
+    {
+        //For override
+    }
 }
