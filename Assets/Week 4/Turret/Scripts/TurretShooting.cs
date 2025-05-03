@@ -71,7 +71,7 @@ public class TurretShooting : SaiBehaviour
         Invoke(nameof(this.Shooting), this.shootSpeed + Random.Range(-0.1f, 0.1f));
 
         if (this.target == null) return;
-        Debug.Log("Shooting");
+        //Debug.Log("Shooting");
         FirePoint firePoint = this.GetFirePoint();
 
         //Vector3 rotarionDirection = this.ctrl.Rotator.transform.forward;
