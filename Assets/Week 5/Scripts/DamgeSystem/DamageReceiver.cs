@@ -5,7 +5,9 @@ public class DamageReceiver : SaiBehaviour
 {
     [Header("Damage Receiver")]
     [SerializeField] protected int currentHp = 10;
+    public int CurrentHp => currentHp;
     [SerializeField] protected int maxHp = 7;
+    public int MaxHp => maxHp;
     [SerializeField] protected bool isAlive = true;
 
     protected virtual void OnEnable()
@@ -29,7 +31,7 @@ public class DamageReceiver : SaiBehaviour
 
     }
 
-    protected virtual void Deduct(int damage)
+    public virtual void Deduct(int damage)
     {
         this.currentHp -= damage;
         if (this.currentHp < 0) this.currentHp = 0;

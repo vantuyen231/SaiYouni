@@ -31,4 +31,5 @@ public class EnemyDamageReceiver : DamageReceiver
     {
         this.ctrl.Animator.SetTrigger("IsHit");
     }
+
 }

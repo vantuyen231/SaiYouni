@@ -9,6 +9,7 @@ public class TurretTargeting : SaiBehaviour
     public Targetable Nearest => nearest;
 
     [SerializeField] protected List<Targetable> enemies;
+    public List<Targetable> Enemies => enemies;
 
 
     protected virtual void FixedUpdate()
@@ -54,4 +55,8 @@ public class TurretTargeting : SaiBehaviour
         if (!this.enemies.Contains(this.nearest)) this.nearest = null;
     }
 
+    protected virtual void OnTriggerStay(Collider other)
+    {
+
+    }
 }
