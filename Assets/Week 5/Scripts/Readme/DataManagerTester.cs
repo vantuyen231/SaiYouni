@@ -13,41 +13,41 @@ public class DataManagerTester : MonoBehaviour
 
     void Bai1()
     {
-        Debug.Log("====Bai1=====");
+        //Debug.Log("====Bai1=====");
         var holder = gameObject.AddComponent<IntHolder>();
         holder.SetData(999);
-        Debug.Log("Data: " + holder.GetData());
+        //Debug.Log("Data: " + holder.GetData());
     }
 
     void Bai2()
     {
-        Debug.Log("====Bai2=====");
+        //Debug.Log("====Bai2=====");
         DataManager<string> stringManager = new DataManager<string>();
         stringManager.Add("Enemy");
         stringManager.Add("Player");
         stringManager.PrintAll();
 
         bool found = stringManager.Contains("Enemy");
-        Debug.Log("Enemy ton tai: " + found);
+        //Debug.Log("Enemy ton tai: " + found);
 
 
         DataManager<int> intManager = new DataManager<int>();
         intManager.Add(10);
         intManager.Add(20);
-        Debug.Log("Danh sach so nguyen:");
+        //Debug.Log("Danh sach so nguyen:");
         intManager.PrintAll();
-        Debug.Log("Chua 10? " + intManager.Contains(10));
+        //Debug.Log("Chua 10? " + intManager.Contains(10));
     }
 
     void Bai3()
     {
-        Debug.Log("====Bai3=====");
+        //Debug.Log("====Bai3=====");
         int[] numbers = { 1, 3, 7, 2 };
         int max = GenericUtility.MaxElement(numbers);
-        Debug.Log("So lon nhat: " + max);
+        //Debug.Log("So lon nhat: " + max);
 
         string a = "Hello", b = "World";
         GenericUtility.Swap(ref a, ref b);
-        Debug.Log($"a = {a}, b = {b}");
+        //Debug.Log($"a = {a}, b = {b}");
     }
 }

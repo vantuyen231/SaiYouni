@@ -100,7 +100,7 @@ public class vThirdPersonCamera : MonoBehaviour
         currentTarget = newTarget ? newTarget : target;
     }
 
-    public void SetMainTarget(Transform newTarget)
+    public virtual void SetMainTarget(Transform newTarget)
     {
         target = newTarget;
         currentTarget = newTarget;
